@@ -42,6 +42,17 @@
         #welcome-screen button:disabled {
             background-color: grey;
         }
+
+        /* Estilo para a letra da música */
+        .lyrics {
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #f4f4f9;
+            color: #333;
+            border-radius: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -66,10 +77,6 @@
         <h1>Eu te amo</h1>
         <h2>Eu te amo | I love you | Te amo | Je t'aime | 愛してる | Ti amo | Ich liebe dich | EU. TE. AMO...</h2>
 
-        <div id="inicio" class="section">
-            <img src="imagem-inicial.jpg" alt="Imagem Inicial" class="imagem-inicial">
-        </div>
-
         <nav>
             <button onclick="showSection('galeria')">Galeria</button>
             <button onclick="showSection('mensagem')">Mensagem</button>
@@ -77,7 +84,8 @@
             <button onclick="showSection('sobre')">Um pouco sobre mim</button>
         </nav>
 
-        <div id="letra-musica" class="section" style="display:none;">
+        <!-- Letra da música abaixo dos botões -->
+        <div class="lyrics">
             <h3>Letra da Música "Die With A Smile"</h3>
             <pre>
 Ooh
@@ -135,7 +143,16 @@ I'd wanna be next to you
             </pre>
         </div>
 
-        <p>QUERO VOCÊ PRA VIDA TODA MEU BEM... EU TE AMO MINHA MORCEGUINHA &lt;3</p>
+        <div id="inicio" class="section">
+            <img src="imagem-inicial.jpg" alt="Imagem Inicial" class="imagem-inicial">
+        </div>
+
+        <nav>
+            <button onclick="showSection('galeria')">Galeria</button>
+            <button onclick="showSection('mensagem')">Mensagem</button>
+            <button onclick="showSection('agradecimento')">Agradecimento</button>
+            <button onclick="showSection('sobre')">Um pouco sobre mim</button>
+        </nav>
 
         <div id="galeria" class="section" style="display:none;">
             <h1>Galeria de Amor</h1>
@@ -174,8 +191,8 @@ I'd wanna be next to you
         </div>
 
         <div id="mensagem" class="section" style="display:none;">
-            <h1>Mensagem para Maria</h1>
-            <p>Oi, meu amor! Só queria te lembrar de como você é especial para mim. Sua presença ilumina meus dias e seu sorriso é a razão de toda a minha felicidade. Eu te amo demais e sou grato por ter você na minha vida. Cada momento ao seu lado é especial, e estou ansioso para vivermos muitas outras aventuras juntos. Te amo, meu anjinho! ❤️</p>
+            <h1>Mensagem</h1>
+            <p>Eu te amo de uma forma inexplicável. Você é minha luz, minha inspiração, e eu sou eternamente grato por ter você em minha vida. Desde o primeiro momento, eu soube que você era especial, e cada dia ao seu lado é uma nova aventura. Obrigado por ser meu tudo. Te amo!</p>
         </div>
 
         <div id="agradecimento" class="section" style="display:none;">
