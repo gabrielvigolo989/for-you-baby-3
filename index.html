@@ -5,9 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surpresa para Você</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos para a tela de pergunta */
+        #welcome-screen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #800080; /* Fundo roxo */
+            color: white;
+            text-align: center;
+        }
+
+        #welcome-screen h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        #welcome-screen button {
+            background-color: #7a1ea1; /* Cor do botão Sim */
+            color: white;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        #welcome-screen #no-btn {
+            background-color: grey; /* Cor cinza para "Não" */
+            cursor: not-allowed;
+        }
+
+        #welcome-screen button:disabled {
+            background-color: grey;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
+
+    <!-- Tela de pergunta inicial -->
+    <div id="welcome-screen">
+        <h1>VOCÊ ME AMA???</h1>
+        <button id="yes-btn">Sim</button>
+        <button id="no-btn" disabled>Não (opção indisponível)</button>
+    </div>
+
+    <script>
+        // Redirecionar para o site principal ao clicar em "Sim"
+        document.getElementById("yes-btn").onclick = function() {
+            document.getElementById("welcome-screen").style.display = 'none'; // Esconde a tela inicial
+            document.querySelector('.container').style.display = 'block'; // Exibe o conteúdo do site
+        };
+    </script>
+
+    <!-- O conteúdo original que será mostrado após o clique -->
+    <div class="container" style="display:none;">
         <h1>Eu te amo</h1>
         <h2>Eu te amo | I love you | Te amo | Je t'aime | 愛してる | Ti amo | Ich liebe dich | EU. TE. AMO...</h2>
 
@@ -43,84 +98,105 @@ If the party was over and our time on Earth was through
 I'd wanna hold you just for a while
 And die with a smile
 If the world was ending, I'd wanna be next to you
+
+Woo-ooh
+
+Ooh, lost
+Lost in the words that we scream
+I don't even wanna do this anymore
+'Cause you already know what you mean to me
+And our love is the only war worth fighting for
+
+Wherever you go, that's where I'll follow
+Nobody's promised tomorrow
+So I'ma love you every night like it's the last night
+Like it's the last night
+
+If the world was ending, I'd wanna be next to you
+If the party was over and our time on Earth was through
+I'd wanna hold you just for a while
+And die with a smile
+If the world was ending, I'd wanna be next to you
+
+Right next to you
+Next to you
+Right next to you
+Oh-oh-oh
+
+If the world was ending, I'd wanna be next to you
+If the party was over and our time on Earth was through
+I'd wanna hold you just for a while
+And die with a smile
+If the world was ending, I'd wanna be next to you
+If the world was ending, I'd wanna be next to you
+
+Ooh, ooh
+I'd wanna be next to you
             </pre>
         </div>
 
         <p>QUERO VOCÊ PRA VIDA TODA MEU BEM... EU TE AMO MINHA MORCEGUINHA &lt;3</p>
 
-        <!-- Nova Seção -->
-        <div id="escolha" class="section" style="display:none;">
-            <h1>Você gostaria de ver a próxima surpresa?</h1>
-            <button onclick="showSection('proximaSurpresa')">Sim</button>
-            <button disabled>NÃO (Opção indisponível)</button>
-        </div>
-
-        <!-- Seção da próxima surpresa (não altere) -->
-        <div id="proximaSurpresa" class="section" style="display:none;">
-            <h1>Surpresa Revelada!</h1>
-            <p>Esta é a sua surpresa, espero que você goste!</p>
-            <!-- Adicione aqui o código que você já tem para a segunda tela -->
-        </div>
-
         <div id="galeria" class="section" style="display:none;">
             <h1>Galeria de Amor</h1>
             <div class="image-container">
                 <img src="imagem1.jpeg" alt="Imagem 1" onclick="openModal('imagem1.jpeg')">
-                <!-- Adicione as outras imagens aqui -->
+                <img src="imagem2.jpeg" alt="Imagem 2" onclick="openModal('imagem2.jpeg')">
+                <img src="imagem3.jpeg" alt="Imagem 3" onclick="openModal('imagem3.jpeg')">
+                <img src="imagem4.jpeg" alt="Imagem 4" onclick="openModal('imagem4.jpeg')">
+                <img src="imagem5.jpeg" alt="Imagem 5" onclick="openModal('imagem5.jpeg')">
+                <img src="imagem6.jpeg" alt="Imagem 6" onclick="openModal('imagem6.jpeg')">
+                <img src="imagem7.jpeg" alt="Imagem 7" onclick="openModal('imagem7.jpeg')">
+                <img src="imagem8.jpeg" alt="Imagem 8" onclick="openModal('imagem8.jpeg')">
+                <img src="imagem9.jpeg" alt="Imagem 9" onclick="openModal('imagem9.jpeg')">
+                <img src="imagem10.jpeg" alt="Imagem 10" onclick="openModal('imagem10.jpeg')">
+                <img src="imagem11.jpeg" alt="Imagem 11" onclick="openModal('imagem11.jpeg')">
+                <img src="imagem12.jpeg" alt="Imagem 12" onclick="openModal('imagem12.jpeg')">
+                <img src="imagem13.jpeg" alt="Imagem 13" onclick="openModal('imagem13.jpeg')">
+                <img src="imagem14.jpeg" alt="Imagem 14" onclick="openModal('imagem14.jpeg')">
+                <img src="imagem15.jpeg" alt="Imagem 15" onclick="openModal('imagem15.jpeg')">
+                <img src="imagem16.jpeg" alt="Imagem 16" onclick="openModal('imagem16.jpeg')">
+                <img src="imagem17.jpeg" alt="Imagem 17" onclick="openModal('imagem17.jpeg')">
+                <img src="imagem18.jpeg" alt="Imagem 18" onclick="openModal('imagem18.jpeg')">
+                <img src="imagem19.jpeg" alt="Imagem 19" onclick="openModal('imagem19.jpeg')">
+                <img src="imagem20.jpeg" alt="Imagem 20" onclick="openModal('imagem20.jpeg')">
+                <img src="imagem21.jpeg" alt="Imagem 21" onclick="openModal('imagem21.jpeg')">
+                <img src="imagem22.jpeg" alt="Imagem 22" onclick="openModal('imagem22.jpeg')">
+                <img src="imagem23.jpeg" alt="Imagem 23" onclick="openModal('imagem23.jpeg')">
+                <img src="imagem24.jpeg" alt="Imagem 24" onclick="openModal('imagem24.jpeg')">
+                <img src="imagem25.jpeg" alt="Imagem 25" onclick="openModal('imagem25.jpeg')">
+                <img src="imagem26.jpeg" alt="Imagem 26" onclick="openModal('imagem26.jpeg')">
+                <img src="imagem27.jpeg" alt="Imagem 27" onclick="openModal('imagem27.jpeg')">
+                <img src="imagem28.jpeg" alt="Imagem 28" onclick="openModal('imagem28.jpeg')">
+                <img src="imagem29.jpeg" alt="Imagem 29" onclick="openModal('imagem29.jpeg')">
+                <img src="imagem30.jpeg" alt="Imagem 30" onclick="openModal('imagem30.jpeg')">
             </div>
         </div>
 
         <div id="mensagem" class="section" style="display:none;">
             <h1>Mensagem para Maria</h1>
-            <p>Oi, meu amor! Só queria te lembrar de como você é especial para mim...</p>
+            <p>Oi, meu amor! Só queria te lembrar de como você é especial para mim. Sua presença ilumina meus dias e seu sorriso é a razão de toda a minha felicidade. Eu te amo demais e sou grato por ter você na minha vida. Cada momento ao seu lado é especial, e estou ansioso para vivermos muitas outras aventuras juntos. Te amo, meu anjinho! ❤️</p>
         </div>
 
         <div id="agradecimento" class="section" style="display:none;">
             <h1>Agradecimento</h1>
-            <p>Mozinho, quero agradecer por todos os momentos que vivemos...</p>
+            <p>Obrigado por ser quem você é. Por ser meu amor, minha vida, meu motivo de felicidade. Eu amo você mais do que as palavras podem expressar. ❤️</p>
         </div>
 
         <div id="sobre" class="section" style="display:none;">
             <h1>Um pouco sobre mim</h1>
-            <p>Às vezes, eu sei que sou difícil de lidar...</p>
+            <p>Oi, meu nome é João e eu sou a pessoa mais feliz do mundo por ter você na minha vida. Eu amo você incondicionalmente e farei de tudo para te ver sorrir sempre!</p>
         </div>
 
-        <!-- Modal para abrir imagens -->
-        <div id="modal" class="modal" onclick="closeModal()">
+        <!-- Modal para visualização das imagens -->
+        <div id="myModal" class="modal">
             <span class="close">&times;</span>
-            <img class="modal-content" id="modalImage">
-            <div id="caption"></div>
+            <img class="modal-content" id="imgModal">
         </div>
+
     </div>
 
-    <script>
-        function showSection(sectionId) {
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                section.style.display = 'none';
-            });
-            document.getElementById(sectionId).style.display = 'block';
-        }
+    <script src="scripts.js"></script>
 
-        function openModal(imageSrc) {
-            const modal = document.getElementById("modal");
-            const modalImage = document.getElementById("modalImage");
-            modal.style.display = "block";
-            modalImage.src = imageSrc;
-            modalImage.classList.add('fade-in'); // Adiciona animação
-        }
-
-        function closeModal() {
-            const modal = document.getElementById("modal");
-            modal.style.display = "none";
-            const modalImage = document.getElementById("modalImage");
-            modalImage.classList.remove('fade-in'); // Remove animação
-        }
-
-        // Exibe a seção inicial ao carregar a página
-        window.onload = function() {
-            showSection('escolha');
-        };
-    </script>
 </body>
 </html>
