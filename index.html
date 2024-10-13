@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa para Você</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Eu te amo</h1>
+        <h2>Eu te amo | I love you | Te amo | Je t'aime | 愛してる | Ti amo | Ich liebe dich | EU. TE. AMO...</h2>
+
+        <div id="inicio" class="section">
+            <img src="imagem-inicial.jpg" alt="Imagem Inicial" class="imagem-inicial">
+        </div>
+
+        <nav>
+            <button onclick="showSection('galeria')">Galeria</button>
+            <button onclick="showSection('mensagem')">Mensagem</button>
+            <button onclick="showSection('agradecimento')">Agradecimento</button>
+            <button onclick="showSection('sobre')">Um pouco sobre mim</button>
+        </nav>
+
+        <div id="letra-musica" class="section" style="display:none;">
+            <h3>Letra da Música "Die With A Smile"</h3>
+            <pre>
+Ooh
+I
+
+I just woke up from a dream
+Where you and I had to say goodbye
+And I don't know what it all means
+But since I survived, I realized
+
+Wherever you go, that's where I'll follow
+Nobody's promised tomorrow
+So I'ma love you every night like it's the last night
+Like it's the last night
+
+If the world was ending, I'd wanna be next to you
+If the party was over and our time on Earth was through
+I'd wanna hold you just for a while
+And die with a smile
+If the world was ending, I'd wanna be next to you
+            </pre>
+        </div>
+
+        <p>QUERO VOCÊ PRA VIDA TODA MEU BEM... EU TE AMO MINHA MORCEGUINHA &lt;3</p>
+
+        <!-- Nova Seção -->
+        <div id="escolha" class="section" style="display:none;">
+            <h1>Você gostaria de ver a próxima surpresa?</h1>
+            <button onclick="showSection('proximaSurpresa')">Sim</button>
+            <button disabled>NÃO (Opção indisponível)</button>
+        </div>
+
+        <!-- Seção da próxima surpresa (não altere) -->
+        <div id="proximaSurpresa" class="section" style="display:none;">
+            <h1>Surpresa Revelada!</h1>
+            <p>Esta é a sua surpresa, espero que você goste!</p>
+            <!-- Adicione aqui o código que você já tem para a segunda tela -->
+        </div>
+
+        <div id="galeria" class="section" style="display:none;">
+            <h1>Galeria de Amor</h1>
+            <div class="image-container">
+                <img src="imagem1.jpeg" alt="Imagem 1" onclick="openModal('imagem1.jpeg')">
+                <!-- Adicione as outras imagens aqui -->
+            </div>
+        </div>
+
+        <div id="mensagem" class="section" style="display:none;">
+            <h1>Mensagem para Maria</h1>
+            <p>Oi, meu amor! Só queria te lembrar de como você é especial para mim...</p>
+        </div>
+
+        <div id="agradecimento" class="section" style="display:none;">
+            <h1>Agradecimento</h1>
+            <p>Mozinho, quero agradecer por todos os momentos que vivemos...</p>
+        </div>
+
+        <div id="sobre" class="section" style="display:none;">
+            <h1>Um pouco sobre mim</h1>
+            <p>Às vezes, eu sei que sou difícil de lidar...</p>
+        </div>
+
+        <!-- Modal para abrir imagens -->
+        <div id="modal" class="modal" onclick="closeModal()">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <div id="caption"></div>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        function openModal(imageSrc) {
+            const modal = document.getElementById("modal");
+            const modalImage = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImage.src = imageSrc;
+            modalImage.classList.add('fade-in'); // Adiciona animação
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("modal");
+            modal.style.display = "none";
+            const modalImage = document.getElementById("modalImage");
+            modalImage.classList.remove('fade-in'); // Remove animação
+        }
+
+        // Exibe a seção inicial ao carregar a página
+        window.onload = function() {
+            showSection('escolha');
+        };
+    </script>
+</body>
+</html>
